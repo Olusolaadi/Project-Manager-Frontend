@@ -14,7 +14,6 @@ function App() {
     // fetch all projects
     const fetchProjects = async () => {
       const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/projects/`);
-      console.log(import.meta.env.VITE_API_BASE_URL)
       const projectsData = await res.json();
       console.log(projectsData);
       setProjects(projectsData.projects);
